@@ -1,0 +1,22 @@
+; Zone file for your_domain_name
+$TTL 14400
+@ 86400 IN SOA NS1.fmmapps.com. root.fmmapps.com. (
+2008070400 ; serial, todays date+todays
+86400 ; refresh, seconds
+7200 ; retry, seconds
+3600000 ; expire, seconds
+86400 ) ; minimum, seconds
+
+fmmapps.com. 86400 IN NS NS1.fmmapps.com.
+fmmapps.com. 86400 IN NS NS2.fmmapps.com.
+
+
+fmmapps.com. IN A 50.116.95.92
+
+localhost.fmmapps.com. IN A 127.0.0.1
+
+fmmapps.com. IN MX 0 fmmapps.com.
+
+mail IN CNAME fmmapps.com.
+www IN CNAME fmmapps.com.
+ftp IN A 50.116.95.92

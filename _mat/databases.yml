@@ -1,0 +1,15 @@
+prod:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=fmmapps'
+      username: root
+      password: 
+
+dev:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=fmmapps'
+      username: root
+      password: null
