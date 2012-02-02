@@ -1,0 +1,3 @@
+VHHelloBundle_homepage:
+    pattern:  /
+    defaults: { _controller: VHHelloBundle:Default:index }

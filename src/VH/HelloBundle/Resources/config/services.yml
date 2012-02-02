@@ -1,0 +1,7 @@
+parameters:
+#    vh_hello.example.class: VH\HelloBundle\Example
+
+services:
+#    vh_hello.example:
+#        class: %vh_hello.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,13 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/vhhello/css/main.css') }}" type="text/css" />
+        {% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header id="banner" class="body">
+            <h1><a href="http://crowdser.com/">Crowdser</a></h1>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">about</a></li>
+                    <li><a href="#">how it works</a></li>
+                    <li><a href="#">careers</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside id="featured" class="body">
+            <article>
+                <hgroup>
+                    <h2>Connecting partners around the world</h2>
+                    <h3><a href="#">something!</a></h3>
+                </hgroup>
+                <p>Crowdser is a professional virtual working space that combines the power of the crowd with the know-how
+                    of sales. Crowdser’s business model benefits both companies and sellers.</p>
+            </article>
+        </aside>
+
+	    <section id="content" class="body">
+            {% block body %}{% endblock %}
+        </section>
+
+        <footer id="contentinfo" class="body">
+            <address id="about" class="vcard body">
+                <span class="primary">
+                    <strong><a href="http://crowdser.com/" class="fn url">Crowdser</a></strong>
+                    <span class="role">Crowdser</span>
+                </span>
+
+                <span class="copyright">© 2010-2011, Crowdser, All Rights Reserved
+                Box 30069 • 200 61 Limhamn • Sweden | info@crowdser.com</span>
+            </address>
+        </footer>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
